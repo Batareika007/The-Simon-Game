@@ -1,0 +1,108 @@
+/* ============================  Global style  ============================== 
+   ========================================================================== */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+/* remove arrow from select */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* text-indent: 1px; */
+    /* text-overflow: ''; */
+}
+
+/* remove 'X' from input box to clear the text*/
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: 700;
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul li {
+    list-style-type: none;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+
+
+/* ============================  Global style end  ========================== 
+   ========================================================================== */

@@ -1,0 +1,57 @@
+@import 'normalize';
+@import 'global';
+@import 'colors';
+
+.hide-scroll {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+
+    /* Firefox */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* container max width -------------------  */
+.wrapper {
+    * {
+        padding: 24px 0;
+    }
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    max-width: 1160px;
+}
+
+.header {
+    margin: 0 auto;
+}
+
+/* main -------------------  */
+.main {
+    margin: 0 auto;
+    flex: 1 1 auto;
+}
+
+/* footer -------------------  */
+.footer {
+    margin: 0 auto;
+}
