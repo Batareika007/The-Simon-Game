@@ -484,6 +484,11 @@ img {
 }
 
 /* container max width -------------------  */
+body {
+  color: #fff;
+  background: radial-gradient(50% 50% at 50% 50%, #232B31 0%, #121517 100%);
+}
+
 .wrapper * {
   padding: 24px 0;
 }
@@ -495,12 +500,8 @@ img {
   max-width: 1160px;
 }
 
-.header {
-  margin: 0 auto;
-}
-
 /* main -------------------  */
-.main {
+main {
   margin: 0 auto;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -508,6 +509,3 @@ img {
 }
 
 /* footer -------------------  */
-.footer {
-  margin: 0 auto;
-}
