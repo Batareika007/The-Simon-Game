@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -483,29 +484,98 @@ img {
           justify-content: center;
 }
 
-/* container max width -------------------  */
-body {
-  color: #fff;
-  background: radial-gradient(50% 50% at 50% 50%, #232B31 0%, #121517 100%);
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.wrapper * {
-  padding: 24px 0;
+/* container max width -------------------  */
+body {
+  font-family: 'Press Start 2P', cursive;
+  color: #fff;
+  background: radial-gradient(50% 50% at 50% 50%, #232B31 0%, #121517 100%);
 }
 
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 1.5rem;
-  max-width: 1160px;
 }
 
 /* main -------------------  */
 main {
-  margin: 0 auto;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+}
+
+.game-container__item {
+  gap: 3vw;
+}
+
+.game-container__item:first-child {
+  margin-bottom: 3vw;
+}
+
+.game-container__text {
+  padding: 2vw;
+  position: absolute;
+  background-color: #121517ef;
+  height: 25vw;
+  width: 30vw;
+  border-radius: 30vw;
+  font-size: 3.4vw;
+  text-align: center;
+  line-height: 150%;
+}
+
+.button_1,
+.button_2,
+.button_3,
+.button_4 {
+  width: 20vw;
+  height: 20vw;
+  cursor: pointer;
+}
+
+.button_1 {
+  background-color: #d5261a;
+  border-top-left-radius: 50%;
+}
+
+.button_1:hover {
+  background-color: #b4601e;
+}
+
+.button_2 {
+  border-top-right-radius: 50%;
+  background-color: #317514;
+}
+
+.button_2:hover {
+  background-color: #3d5e20;
+}
+
+.button_3 {
+  background-color: #fbb13c;
+  border-bottom-left-radius: 50%;
+}
+
+.button_3:hover {
+  background-color: #edc94a;
+}
+
+.button_4 {
+  background-color: #302bbd;
+  border-bottom-right-radius: 50%;
+}
+
+.button_4:hover {
+  background-color: #2f2caa;
 }
 
 /* footer -------------------  */
