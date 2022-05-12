@@ -14,7 +14,7 @@ function nextSequence(){
     gamePattern.push(randomChosenColour);
 
     $('#'+randomChosenColour).fadeOut(250).fadeIn(50);
-    new Audio('../sounds/' + randomChosenColour + '.mp3').play();
+    new Audio('sounds/' + randomChosenColour + '.mp3').play();
 }
 
 // run function on any keypress
