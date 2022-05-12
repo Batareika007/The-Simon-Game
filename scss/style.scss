@@ -74,13 +74,11 @@ main {
         font-size: 3.4vw;
         text-align: center;
         line-height: 150%;
+        z-index: 100;
     }
 }
 
-.button_1,
-.button_2,
-.button_3,
-.button_4 {
+.btn {
     width: 20vw;
     height: 20vw;
     cursor: pointer;
@@ -88,7 +86,7 @@ main {
 
 }
 
-.button_1 {
+.red {
     background-color: #d5261a;
     border-top-left-radius: 50%;
 
@@ -97,7 +95,7 @@ main {
     }
 }
 
-.button_2 {
+.green {
     border-top-right-radius: 50%;
     background-color: #317514;
 
@@ -106,7 +104,7 @@ main {
     }
 }
 
-.button_3 {
+.yellow {
     background-color: #fbb13c;
     border-bottom-left-radius: 50%;
 
@@ -115,7 +113,7 @@ main {
     }
 }
 
-.button_4 {
+.blue {
     background-color: #302bbd;
     border-bottom-right-radius: 50%;
 

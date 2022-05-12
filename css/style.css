@@ -537,12 +537,10 @@ main {
   font-size: 3.4vw;
   text-align: center;
   line-height: 150%;
+  z-index: 100;
 }
 
-.button_1,
-.button_2,
-.button_3,
-.button_4 {
+.btn {
   width: 20vw;
   height: 20vw;
   cursor: pointer;
@@ -550,39 +548,39 @@ main {
           box-shadow: 0px 0px 2vw 0px rgba(179, 191, 201, 0.9) inset;
 }
 
-.button_1 {
+.red {
   background-color: #d5261a;
   border-top-left-radius: 50%;
 }
 
-.button_1:hover {
+.red:hover {
   background-color: #b4601e;
 }
 
-.button_2 {
+.green {
   border-top-right-radius: 50%;
   background-color: #317514;
 }
 
-.button_2:hover {
+.green:hover {
   background-color: #3d5e20;
 }
 
-.button_3 {
+.yellow {
   background-color: #fbb13c;
   border-bottom-left-radius: 50%;
 }
 
-.button_3:hover {
+.yellow:hover {
   background-color: #edc94a;
 }
 
-.button_4 {
+.blue {
   background-color: #302bbd;
   border-bottom-right-radius: 50%;
 }
 
-.button_4:hover {
+.blue:hover {
   background-color: #2f2caa;
 }
 
