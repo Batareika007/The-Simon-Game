@@ -52,6 +52,9 @@ main {
 }
 
 .game-container {
+    padding: 3vw;
+    border-radius: 13vw;
+    background-color: #121517;
 
     &__item {
         gap: 3vw;
@@ -64,8 +67,7 @@ main {
     &__text {
         padding: 2vw;
         position: absolute;
-        // background: radial-gradient(50% 50% at 50% 50%, #232B31 50%, #121517de 100%);
-        background-color: #121517ef;
+        background-color: #121517;
         height: 25vw;
         width: 30vw;
         border-radius: 30vw;
@@ -82,6 +84,7 @@ main {
     width: 20vw;
     height: 20vw;
     cursor: pointer;
+    box-shadow: 0px 0px 2vw 0px rgba(179, 191, 201, 0.9) inset;
 
 }
 
