@@ -17,7 +17,11 @@ function nextSequence() {
     gamePattern.push(randomChosenColour);
 
     // $('#' + randomChosenColour).fadeOut(250).fadeIn(50);
-    $('#' + randomChosenColour).addClass(randomChosenColour + "-active").delay(1000).removeClass(randomChosenColour + "-active");
+    // $('#' + randomChosenColour).delay(3000).toggleClass(randomChosenColour + "-active");
+    $('#' + randomChosenColour).addClass(randomChosenColour + "-active").delay(300).queue(function(removeClass){
+        $(this).removeClass(randomChosenColour + "-active");
+        removeClass();
+    });
     new Audio('sounds/' + randomChosenColour + '.mp3').play();
 }
 
