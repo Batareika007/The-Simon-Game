@@ -27,6 +27,7 @@ function nextSequence() {
 
 // run function on any keypress
 $(document).keypress(nextSequence);
+$(document).click(nextSequence);
 
 $(".red").hover(function () {
     $(this).toggleClass("red-active");
