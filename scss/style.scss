@@ -2,6 +2,7 @@
 @import 'global';
 @import 'colors';
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
 .hide-scroll {
     -ms-overflow-style: none;
@@ -35,6 +36,7 @@
 /* container max width -------------------  */
 body {
     font-family: 'Press Start 2P', cursive;
+        font-family: 'Luckiest Guy', cursive;
     color: #fff;
     background: radial-gradient(50% 50% at 50% 50%, #232B31 0%, #121517 100%);
 }
@@ -67,7 +69,7 @@ main {
     &__text {
         padding: 2vw;
         position: absolute;
-        background-color: #121517;
+        background-color: #7e2d90;
         height: 25vw;
         width: 30vw;
         border-radius: 30vw;
@@ -75,6 +77,11 @@ main {
         text-align: center;
         line-height: 150%;
         z-index: 100;
+        font-weight: 300;
+        letter-spacing: 5px;
+        border: 3vw solid #121517;
+        box-shadow: 0px 0px 2vw 0px rgba(14, 42, 65, 0.9) inset;
+        color: #ddb0e8;
     }
 }
 
@@ -82,7 +89,7 @@ main {
     width: 20vw;
     height: 20vw;
     cursor: pointer;
-    box-shadow: 0px 0px 2vw 0px rgba(179, 191, 201, 0.9) inset;
+    box-shadow: 0px 0px 2vw 0px rgba(14, 42, 65, 0.9) inset;
 
 }
 
@@ -91,7 +98,7 @@ main {
     border-top-left-radius: 50%;
 
     &:hover {
-        background-color: #b4601e;
+        background-color: #c23e23;
     }
 }
 
