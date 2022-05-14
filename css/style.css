@@ -557,12 +557,14 @@ main {
 }
 
 .red {
-  background-color: #d5261a;
+  background-color: #8d231b;
   border-top-left-radius: 50%;
 }
 
-.red:hover {
-  background-color: #c23e23;
+.red-active {
+  background-color: #ff3f31;
+  -webkit-box-shadow: 0px 0px 2vw 0px #ff3f31, 0px 0px 2vw 0px rgba(14, 42, 65, 0.9) inset;
+          box-shadow: 0px 0px 2vw 0px #ff3f31, 0px 0px 2vw 0px rgba(14, 42, 65, 0.9) inset;
 }
 
 .green {
@@ -570,26 +572,32 @@ main {
   background-color: #317514;
 }
 
-.green:hover {
-  background-color: #3d5e20;
+.green-active {
+  background-color: #69ff29;
+  -webkit-box-shadow: 0px 0px 2vw 0px #69ff29, 0px 0px 2vw 0px rgba(14, 42, 65, 0.9) inset;
+          box-shadow: 0px 0px 2vw 0px #69ff29, 0px 0px 2vw 0px rgba(14, 42, 65, 0.9) inset;
 }
 
 .yellow {
-  background-color: #fbb13c;
+  background-color: #9a6b1f;
   border-bottom-left-radius: 50%;
 }
 
-.yellow:hover {
-  background-color: #edc94a;
+.yellow-active {
+  background-color: #ffb237;
+  -webkit-box-shadow: 0px 0px 2vw 0px #ffb237, 0px 0px 2vw 0px rgba(14, 42, 65, 0.9) inset;
+          box-shadow: 0px 0px 2vw 0px #ffb237, 0px 0px 2vw 0px rgba(14, 42, 65, 0.9) inset;
 }
 
 .blue {
-  background-color: #302bbd;
+  background-color: #221e84;
   border-bottom-right-radius: 50%;
 }
 
-.blue:hover {
-  background-color: #2f2caa;
+.blue-active {
+  background-color: #403aff;
+  -webkit-box-shadow: 0px 0px 2vw 0px #403aff, 0px 0px 2vw 0px rgba(14, 42, 65, 0.9) inset;
+          box-shadow: 0px 0px 2vw 0px #403aff, 0px 0px 2vw 0px rgba(14, 42, 65, 0.9) inset;
 }
 
 /* footer -------------------  */
