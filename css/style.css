@@ -568,17 +568,9 @@ main {
   border-top-left-radius: 50%;
 }
 
-.red:hover {
-  background-color: #ff3f31;
-}
-
 .green {
   border-top-right-radius: 50%;
   background-color: #317514;
-}
-
-.green:hover {
-  background-color: #69ff29;
 }
 
 .yellow {
@@ -586,17 +578,9 @@ main {
   border-bottom-left-radius: 50%;
 }
 
-.yellow:hover {
-  background-color: #ffb237;
-}
-
 .blue {
   background-color: #221e84;
   border-bottom-right-radius: 50%;
-}
-
-.blue:hover {
-  background-color: #403aff;
 }
 
 .yellow-active {

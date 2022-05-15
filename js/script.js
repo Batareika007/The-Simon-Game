@@ -6,6 +6,7 @@ let gamePattern = [];
 
 let userClickedPattern = [];
 
+let level = 0;
 
 // add to gamePattern random color
 function nextSequence() {
@@ -16,25 +17,27 @@ function nextSequence() {
     
     gamePattern.push(randomChosenColour);
 
-    // $('#' + randomChosenColour).fadeOut(250).fadeIn(50);
-    // $('#' + randomChosenColour).delay(3000).toggleClass(randomChosenColour + "-active");
-    
-    $('#' + randomChosenColour).addClass(randomChosenColour + "-active").delay(300).queue(function (removeClass) {
-        $(this).removeClass(randomChosenColour + "-active");
-        removeClass();
-    });
+    animatedPress(randomChosenColour);
 
     playSound(randomChosenColour);
+
+    $('h1').text('Level ' + level)
+    
+    console.log(level)
+    
+    level++
 }
 
 
 $('.btn').click(function () {
     let userChosenColour = $(this).attr('id');
     
-    playSound(userChosenColour);
-    
     userClickedPattern.push(userChosenColour);
     
+    playSound(userChosenColour);
+    
+    animatedPress(userChosenColour)
+
     console.log(userClickedPattern);
 });
 
@@ -42,3 +45,21 @@ $('.btn').click(function () {
 function playSound(name){
     new Audio('sounds/' + name + '.mp3').play();
 }
+
+function animatedPress(currentColour){
+    $('#' + currentColour).addClass(currentColour + "-active").delay(250).queue(function (removeClass) {
+        $(this).removeClass(currentColour + "-active");
+        removeClass();
+    });
+}
+
+let keyPressed = [];
+$(document).keydown(function(event){
+    if (keyPressed.length === 0){
+        nextSequence();
+    }
+    keyPressed.push(event.key)
+});
+
+
+
