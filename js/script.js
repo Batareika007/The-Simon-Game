@@ -2,6 +2,11 @@ let buttonColours = ['red', 'blue', 'green', 'yellow'];
 
 let gamePattern = [];
 
+// user clicking
+
+let userClickedPattern = [];
+
+// random number 0 - 3
 
 let randomNumber = Math.floor(Math.random() * 4);
 
@@ -13,12 +18,12 @@ function nextSequence() {
     let randomNumber = Math.floor(Math.random() * 4);
 
     let randomChosenColour = buttonColours[randomNumber];
-
+    
     gamePattern.push(randomChosenColour);
 
     // $('#' + randomChosenColour).fadeOut(250).fadeIn(50);
     // $('#' + randomChosenColour).delay(3000).toggleClass(randomChosenColour + "-active");
-    $('#' + randomChosenColour).addClass(randomChosenColour + "-active").delay(300).queue(function(removeClass){
+    $('#' + randomChosenColour).addClass(randomChosenColour + "-active").delay(300).queue(function (removeClass) {
         $(this).removeClass(randomChosenColour + "-active");
         removeClass();
     });
@@ -27,17 +32,12 @@ function nextSequence() {
 
 // run function on any keypress
 $(document).keypress(nextSequence);
-$(document).click(nextSequence);
 
-$(".red").hover(function () {
-    $(this).toggleClass("red-active");
+$('.btn').click(function () {
+    let userChosenColour = this.id;
+    new Audio('sounds/' + userChosenColour + '.mp3').play();
+    userClickedPattern.push(userChosenColour);
+    
+    console.log(userClickedPattern);
 });
-$(".green").hover(function () {
-    $(this).toggleClass("green-active");
-});
-$(".yellow").hover(function () {
-    $(this).toggleClass("yellow-active");
-});
-$(".blue").hover(function () {
-    $(this).toggleClass("blue-active");
-});
+
