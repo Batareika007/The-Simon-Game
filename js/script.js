@@ -23,6 +23,7 @@ function nextSequence() {
 
     // $('#' + randomChosenColour).fadeOut(250).fadeIn(50);
     // $('#' + randomChosenColour).delay(3000).toggleClass(randomChosenColour + "-active");
+    
     $('#' + randomChosenColour).addClass(randomChosenColour + "-active").delay(300).queue(function (removeClass) {
         $(this).removeClass(randomChosenColour + "-active");
         removeClass();
@@ -31,10 +32,12 @@ function nextSequence() {
 }
 
 // run function on any keypress
-$(document).keypress(nextSequence);
+
+// $(document).keypress(nextSequence);
 
 $('.btn').click(function () {
-    let userChosenColour = this.id;
+    // let userChosenColour = this.id;
+    let userChosenColour = $(this).attr('id');
     new Audio('sounds/' + userChosenColour + '.mp3').play();
     userClickedPattern.push(userChosenColour);
     

@@ -461,6 +461,10 @@ img {
   display: none;
 }
 
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;
