@@ -17,22 +17,33 @@ function nextSequence() {
 
     gamePattern.push(randomChosenColour);
 
-    playSound(randomChosenColour);
-    animatedPress(randomChosenColour);
+    for (i = 0; i < gamePattern.length; i++) {
+        runSequence(i);
+    }
 
+    function runSequence(i) {
+        setTimeout(function () {
+            playSound(gamePattern[i]);
+            animatedPress(gamePattern[i]);
+            console.log(gamePattern[i])
+        }, 500 * i); //1200 = time in milliseconds
+    }
+
+    // playSound(randomChosenColour);
+    // animatedPress(randomChosenColour);
 
     $('#level-title').text('Level ' + level);
 
     console.log('level: ' + level);
-    console.log(gamePattern);
+    console.log("Game Pattern: " + gamePattern);
 
 }
 
 
 $('.btn').click(function () {
 
-    if (keyPressed.length > 0) {
 
+    if (keyPressed.length > 0) {
         let userChosenColour = $(this).attr('id');
 
         userClickedPattern.push(userChosenColour);
@@ -41,9 +52,11 @@ $('.btn').click(function () {
 
         animatedPress(userChosenColour)
 
-        console.log('user clicked: ' + userClickedPattern);
+        console.log('user clicked: ' + userClickedPattern.length);
 
         theGame();
+    } else {
+        gameOver()
     }
 });
 
@@ -69,6 +82,8 @@ $(document).keydown(function (event) {
         nextSequence();
         keyPressed.push(event.key);
         // startTheGame();
+    } else {
+        gameOver()
     }
 });
 
@@ -76,24 +91,28 @@ $(document).keydown(function (event) {
 // ==== the game  ===== // 
 
 function theGame() {
-    if (userClickedPattern[userClickedPattern.length - 1] == (gamePattern[userClickedPattern.length - 1])) {
-        console.log('correct');
+    if (userClickedPattern[userClickedPattern.length - 1] === (gamePattern[userClickedPattern.length - 1])) {
+        // console.log('correct');
         if (gamePattern.length > userClickedPattern.length) {
-            console.log('click again')
-       
+            // console.log('continue!')
         } else {
+            // console.log('Granted for next level')
             setTimeout(function () {
                 nextSequence()
             }, 1000);
             userClickedPattern = [];
         }
     } else {
-        console.log('game over');
-        userClickedPattern = []
-        gamePattern = [];
-        keyPressed = [];
-        level = 0;
-        $('#level-title').text('Game over!');
+        gameOver()
     }
 
+}
+
+function gameOver() {
+    console.log('game over');
+    userClickedPattern = []
+    gamePattern = [];
+    keyPressed = [];
+    level = 0;
+    $('#level-title').text('Game over!');
 }
