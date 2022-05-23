@@ -18,7 +18,7 @@ function nextSequence() {
     gamePattern.push(randomChosenColour);
 
     for (i = 0; i < gamePattern.length; i++) {
-        runSequence(i);
+        runSequence(i); // 0 -- 1 -- 2 -- 3 .... 
     }
 
     function runSequence(i) {
@@ -26,7 +26,7 @@ function nextSequence() {
             playSound(gamePattern[i]);
             animatedPress(gamePattern[i]);
             console.log(gamePattern[i])
-        }, 500 * i); //1200 = time in milliseconds
+        }, 300 * i); //1200 = time in milliseconds
     }
 
     // playSound(randomChosenColour);
@@ -52,12 +52,13 @@ $('.btn').click(function () {
 
         animatedPress(userChosenColour)
 
-        console.log('user clicked: ' + userClickedPattern.length);
+        console.log('user clicked: ' + userChosenColour);
 
         theGame();
-    } else {
-        gameOver()
     }
+    // else {
+    //     gameOver()
+    // }
 });
 
 
@@ -79,12 +80,34 @@ let keyPressed = [];
 
 $(document).keydown(function (event) {
     if (keyPressed.length === 0) {
-        nextSequence();
+        $('#level-title').text('Get ready!');
+
+
+
+        for (i = 0; i < buttonColours.length; i++) {
+            runSequence(i); // 0 -- 1 -- 2 -- 3 .... 
+        }
+
+        function runSequence(i) {
+            setTimeout(function () {
+                playSound(buttonColours[i]);
+                animatedPress(buttonColours[i]);
+                console.log(buttonColours[i])
+            }, 100 * i); //1200 = time in milliseconds
+        }
+        setTimeout(function () {
+
+            nextSequence();
+
+        }, 2000)
+        
+
         keyPressed.push(event.key);
         // startTheGame();
-    } else {
-        gameOver()
     }
+    // else {
+    //     gameOver()
+    // }
 });
 
 
@@ -96,10 +119,11 @@ function theGame() {
         if (gamePattern.length > userClickedPattern.length) {
             // console.log('continue!')
         } else {
-            // console.log('Granted for next level')
+            $('#level-title').text('Next round');
+            // console.log('Get ready for next round')
             setTimeout(function () {
                 nextSequence()
-            }, 1000);
+            }, 2000);
             userClickedPattern = [];
         }
     } else {
