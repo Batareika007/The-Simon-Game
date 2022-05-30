@@ -2,13 +2,17 @@ const buttonColours = ['red', 'green', 'yellow', 'blue'];
 
 let gamePattern = [];
 
-// user clicking
-
 let userClickedPattern = [];
 
 let level = 0;
 
-// add to gamePattern random color
+// start game 
+
+$('.start-btn').click(function () {
+
+});
+
+
 function nextSequence() {
     level++
     let randomNumber = Math.floor(Math.random() * 4);
@@ -41,24 +45,8 @@ function nextSequence() {
 
 
 $('.btn').click(function () {
-
-
-    if (keyPressed.length > 0) {
-        let userChosenColour = $(this).attr('id');
-
-        userClickedPattern.push(userChosenColour);
-
-        playSound(userChosenColour);
-
-        animatedPress(userChosenColour)
-
-        console.log('user clicked: ' + userChosenColour);
-
-        theGame();
-    }
-    // else {
-    //     gameOver()
-    // }
+    playSound(this.id);
+    animatedPress(this.id)
 });
 
 
@@ -73,47 +61,6 @@ function animatedPress(currentColour) {
     });
 }
 
-// detect any keypress on keyboard
-let keyPressed = [];
-
-// -- start game --- detect keyboard press for first time and call nextSequence()
-
-$(document).keydown(function (event) {
-    if (keyPressed.length === 0) {
-        $('#level-title').text('Get ready!');
-
-
-
-        for (i = 0; i < buttonColours.length; i++) {
-            runSequence(i); // 0 -- 1 -- 2 -- 3 .... 
-
-        }
-
-        function runSequence(i) {
-            setTimeout(function () {
-                animatedPress(buttonColours[i]);
-                playSound(buttonColours[i]);
-                console.log(buttonColours[i])
-            }, 200); //1200 = time in milliseconds
-        }
-
-        setTimeout(function () {
-
-            nextSequence();
-
-        }, 2000)
-
-
-        keyPressed.push(event.key);
-        // startTheGame();
-    }
-    // else {
-    //     gameOver()
-    // }
-});
-
-
-// ==== the game  ===== // 
 
 function theGame() {
     if (userClickedPattern[userClickedPattern.length - 1] === (gamePattern[userClickedPattern.length - 1])) {

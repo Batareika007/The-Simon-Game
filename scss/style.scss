@@ -53,10 +53,13 @@ body {
 }
 
 
-
 /* main -------------------  */
 main {
     flex: 1 1 auto;
+}
+
+h1{
+    cursor: pointer;
 }
 
 .game-container {
@@ -126,19 +129,25 @@ main {
 
 .yellow-active{
     background-color: #ffb237;
-    box-shadow: 0px 0px 2vw 0px #ffb237,0px 0px 2vw 0px rgba(14, 42, 65, 0.9) inset;
+    box-shadow: 0px 0px 3vw 0.5vw #ffb237,0px 0px 2vw 0px rgba(14, 42, 65, 0.5) inset;
 }
 .blue-active{
     background-color: #403aff;
-    box-shadow: 0px 0px 2vw 0px #403aff,0px 0px 2vw 0px rgba(14, 42, 65, 0.9) inset;
+    box-shadow: 0px 0px 3vw 0.5vw #403aff,0px 0px 2vw 0px rgba(14, 42, 65, 0.5) inset;
 }
 
 .green-active{
     background-color: #69ff29;
-    box-shadow: 0px 0px 2vw 0px #69ff29,0px 0px 2vw 0px rgba(14, 42, 65, 0.9) inset;
+    box-shadow: 0px 0px 3vw 0.5vw #69ff29,0px 0px 2vw 0px rgba(14, 42, 65, 0.5) inset;
 }
 .red-active{
         background-color: #ff3f31;
-        box-shadow: 0px 0px 2vw 0px #ff3f31,0px 0px 2vw 0px rgba(14, 42, 65, 0.9) inset;
+        box-shadow: 0px 0px 3vw 0.5vw #ff3f31,0px 0px 2vw 0px rgba(14, 42, 65, 0.5) inset;
 }
 /* footer -------------------  */
+
+// game over style 
+
+.bg_red{
+    background: rgb(154, 36, 36);
+}
